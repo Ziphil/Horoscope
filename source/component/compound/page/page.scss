@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+
+.root {
+  width: 95vw;
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  container-name: page;
+  container-type: size;
+}
+
+.horoscope {
+  width: min(100cqw, 100cqb);
+  height: min(100cqw, 100cqb);
+  container-name: horoscope;
+  container-type: size;
+}
