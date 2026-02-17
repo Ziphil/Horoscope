@@ -1,7 +1,7 @@
 //
 
 import dayjs from "dayjs";
-import {ReactElement, useMemo} from "react";
+import {ReactElement, useEffect, useMemo, useState} from "react";
 import {Horoscope} from "/source/component/compound/horoscope";
 import {create} from "/source/component/create";
 import {calcCoordinates} from "/source/util/coordinate";
@@ -13,7 +13,15 @@ export const Page = create(
   }: {
   }): ReactElement {
 
-    const coordinates = useMemo(() => calcCoordinates(dayjs()), []);
+    const [now, setNow] = useState(dayjs());
+    const coordinates = useMemo(() => calcCoordinates(now), [now]);
+
+    useEffect(() => {
+      const interval = setInterval(() => {
+        setNow(dayjs());
+      }, 60000);
+      return () => clearInterval(interval);
+    }, []);
 
     return (
       <main styleName="root">
