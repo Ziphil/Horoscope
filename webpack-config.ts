@@ -51,7 +51,8 @@ const config = {
             options: {modules: {localIdentName: "[name]_[local]_[hash:base64:5]"}, url: false}
           },
           {
-            loader: "sass-loader"
+            loader: "sass-loader",
+            options: {api: "modern"}
           }
         ]
       },

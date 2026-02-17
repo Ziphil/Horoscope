@@ -21,10 +21,10 @@
       "plugin:react-hooks/recommended"
     ],
     "ignorePatterns": "webpack-*.ts",
-    "rules": {
-    }
+    "rules": {}
   },
   "dependencies": {
+    "astronomy-engine": "^2.1.19",
     "dayjs": "^1.11.10",
     "dotenv": "^16.0.0",
     "react": "^18.2.0",
