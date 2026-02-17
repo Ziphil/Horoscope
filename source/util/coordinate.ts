@@ -2,14 +2,8 @@
 
 import * as astronomy from "astronomy-engine";
 import {Dayjs} from "dayjs";
+import {Planet} from "/source/util/constant";
 
-
-export const MAIN_PLANETS = ["sun", "moon", "mercury", "venus", "mars", "jupiter", "saturn"] as const;
-export const ADDITIONAL_PLANETS = ["uranus", "neptune"] as const;
-
-export type MainPlanet = (typeof MAIN_PLANETS)[number];
-export type AdditionalPlanet = (typeof ADDITIONAL_PLANETS)[number];
-export type Planet = MainPlanet | AdditionalPlanet;
 
 export type Coordinate = {
   latitude: number,

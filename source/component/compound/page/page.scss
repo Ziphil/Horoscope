@@ -1,9 +1,22 @@
 @charset "utf-8";
 
 
+:root {
+  --light-background-color: oklch(0.36 0.01 286);
+  --dark-background-color: oklch(0.28 0.01 286);
+  --sun-color: oklch(0.7 0.14 70);
+  --moon-color: oklch(0.7 0.14 200);
+  --mercury-color: oklch(0.7 0.14 170);
+  --venus-color: oklch(0.7 0.14 130);
+  --mars-color: oklch(0.7 0.14 20);
+  --jupiter-color: oklch(0.7 0.14 240);
+  --saturn-color: oklch(0.7 0.14 110);
+  --line-color: oklch(1 0 0 / 0.5);
+}
+
 .root {
-  width: 95vw;
-  height: 95vh;
+  width: 90vw;
+  height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;

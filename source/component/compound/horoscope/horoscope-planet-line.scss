@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+
+.root {
+  &[data-planet="sun"] {
+    --color: var(--sun-color);
+  }
+  &[data-planet="moon"] {
+    --color: var(--moon-color);
+  }
+  &[data-planet="mercury"] {
+    --color: var(--mercury-color);
+  }
+  &[data-planet="venus"] {
+    --color: var(--venus-color);
+  }
+  &[data-planet="mars"] {
+    --color: var(--mars-color);
+  }
+  &[data-planet="jupiter"] {
+    --color: var(--jupiter-color);
+  }
+  &[data-planet="saturn"] {
+    --color: var(--saturn-color);
+  }
+}
+
+.line {
+  stroke-width: 4;
+  stroke: var(--color);
+  stroke-dasharray: calc(var(--length));
+  stroke-dashoffset: calc(var(--length) * -1);
+  animation: draw both;
+  animation-duration: 1s;
+  animation-delay: 3.5s;
+  animation-timing-function: ease;
+}
+
+.sector {
+  fill: oklch(from var(--color) l c h / 0.05);
+  filter: blur(4cqi);
+  stroke: none;
+  animation: fade-in both;
+  animation-duration: 1s;
+  animation-delay: 3.5s;
+  animation-timing-function: ease;
+}
+
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

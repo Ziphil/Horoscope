@@ -1,9 +1,7 @@
 @charset "utf-8";
 
+@import url("https://fonts.googleapis.com/css2?family=Ysabeau:wght@1..1000&display=swap");
 
-:root {
-  --background-color: oklch(0.36 0.01 286)
-}
 
 *:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
   all: unset;
@@ -13,7 +11,8 @@
 html {
   width: 100%;
   height: 100%;
-  background-color: var(--background-color);
+  font-family: "Ysabeau", sans-serif;
+  background-image: radial-gradient(circle at center, var(--light-background-color), var(--dark-background-color));
 }
 
 body {

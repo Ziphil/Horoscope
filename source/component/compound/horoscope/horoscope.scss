@@ -1,0 +1,96 @@
+@charset "utf-8";
+
+
+.root {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: visible;
+  animation: scale-in both;
+  animation-duration: 3s;
+  animation-delay: 0s;
+  animation-timing-function: ease;
+}
+
+.outer-frame {
+  stroke-width: 2;
+  stroke: var(--line-color);
+  fill: none;
+  stroke-dasharray: calc(var(--length));
+  stroke-dashoffset: calc(var(--length) * -1);
+  animation: draw both;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-timing-function: ease;
+}
+
+.inner-frame {
+  stroke-width: 1;
+  stroke: var(--line-color);
+  fill: none;
+  stroke-dasharray: calc(var(--length));
+  stroke-dashoffset: calc(var(--length) * -1);
+  animation: draw both;
+  animation-duration: 1s;
+  animation-delay: 1.5s;
+  animation-timing-function: ease;
+}
+
+.center-frame {
+  stroke-width: 1;
+  stroke: var(--line-color);
+  fill: none;
+  stroke-dasharray: calc(var(--length));
+  stroke-dashoffset: calc(var(--length) * -1);
+  animation: fade-in both;
+  animation-duration: 1s;
+  animation-delay: 2.5s;
+  animation-timing-function: ease;
+}
+
+.divider {
+  stroke-width: 1;
+  stroke: var(--line-color);
+  stroke-dasharray: calc(var(--length));
+  stroke-dashoffset: calc(var(--length) * -1);
+  animation: draw both;
+  animation-duration: 1s;
+  animation-delay: 2.5s;
+  animation-timing-function: ease;
+}
+
+.number {
+  font-size: 2cqi;
+  fill: var(--line-color);
+  animation: fade-in both;
+  animation-duration: 1s;
+  animation-delay: 2.5s;
+  animation-timing-function: ease;
+}
+
+
+@keyframes scale-in {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
