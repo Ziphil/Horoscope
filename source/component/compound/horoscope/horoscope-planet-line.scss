@@ -38,11 +38,11 @@
 
 .sector {
   fill: oklch(from var(--color) l c h / 0.05);
-  filter: blur(4cqi);
+  filter: blur(2cqi);
   stroke: none;
   animation: fade-in both;
   animation-duration: 1s;
-  animation-delay: 3.5s;
+  animation-delay: 4s;
   animation-timing-function: ease;
 }
 
