@@ -1,0 +1,10 @@
+node_modules
+dist
+file
+resource
+*.code-workspace
+*.env
+.vscode
+.cursor
+desktop.ini
+Thumbs.db

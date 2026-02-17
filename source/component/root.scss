@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+
+:root {
+  --background-color: #000000;
+}
+
+html {
+  background-color: var(--background-color);
+}
+
+body {
+  overflow: hidden;
+}
