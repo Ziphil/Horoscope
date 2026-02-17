@@ -83,6 +83,11 @@ export const Horoscope = create(
               y={OUTER_RADIUS - (OUTER_RADIUS + INNER_RADIUS) / 2 * Math.sin((index + 0.5) * Math.PI / 6)}
               textAnchor="middle"
               dominantBaseline="central"
+              transform={[
+                `translate(${OUTER_RADIUS + (OUTER_RADIUS + INNER_RADIUS) / 2 * Math.cos((index + 0.5) * Math.PI / 6)} ${OUTER_RADIUS - (OUTER_RADIUS + INNER_RADIUS) / 2 * Math.sin((index + 0.5) * Math.PI / 6)})`,
+                "skewX(-4)",
+                `translate(${-(OUTER_RADIUS + (OUTER_RADIUS + INNER_RADIUS) / 2 * Math.cos((index + 0.5) * Math.PI / 6))} ${-(OUTER_RADIUS - (OUTER_RADIUS + INNER_RADIUS) / 2 * Math.sin((index + 0.5) * Math.PI / 6))})`
+              ].join(" ")}
             >
               {FENNESE_NUMERALS[index]}
             </text>
