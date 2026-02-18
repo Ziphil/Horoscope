@@ -12,7 +12,7 @@ const config = {
   entry: ["./source/index.tsx"],
   output: {
     path: path.join(__dirname, "dist"),
-    publicPath: "/",
+    publicPath: process.env["PUBLIC_PATH"] ?? "/",
     filename: "./bundle.js",
     chunkFilename: "./chunk-[name].js"
   },
