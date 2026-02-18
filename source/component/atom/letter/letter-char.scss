@@ -4,9 +4,11 @@
 .root {
   text-align: center;
   display: inline-block;
-  font-variant-numeric: tabular-nums;
+  &:not([data-char="1"]) {
+    font-variant-numeric: tabular-nums;
+  }
   &[data-numeral] {
-    width: 0.58em;
+    width: 0.56em;
   }
   &[data-rotate="true"] {
     rotate: 180deg;
