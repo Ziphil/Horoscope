@@ -1,6 +1,6 @@
 //
 
-import dayjs from "dayjs";
+import dayjs, {Dayjs} from "dayjs";
 import {ReactElement, useEffect, useMemo, useState} from "react";
 import {Horoscope} from "/source/component/compound/horoscope";
 import {PlanetTable} from "/source/component/compound/planet-table";
@@ -14,8 +14,11 @@ export const Page = create(
   }: {
   }): ReactElement {
 
-    const [now, setNow] = useState(dayjs());
-    const coordinates = useMemo(() => calcCoordinates(now), [now]);
+    const [now, setNow] = useState(() => dayjs());
+    const hashDate = useMemo(() => parseHashDate(), []);
+
+    const date = hashDate ?? now;
+    const coordinates = useMemo(() => calcCoordinates(date), [date]);
 
     useEffect(() => {
       const interval = setInterval(() => {
@@ -27,7 +30,7 @@ export const Page = create(
     return (
       <main styleName="root">
         <div styleName="horoscope">
-          <Horoscope coordinates={coordinates} date={now}/>
+          <Horoscope coordinates={coordinates} date={date}/>
         </div>
         <div styleName="table">
           <PlanetTable coordinates={coordinates}/>
@@ -37,3 +40,18 @@ export const Page = create(
 
   }
 );
+
+
+function parseHashDate(): Dayjs | null {
+  const hash = window.location.hash.slice(1);
+  if (hash) {
+    const parsedDate = dayjs(hash, "YYYY-MM-DD", true);
+    if (parsedDate.isValid()) {
+      return parsedDate;
+    } else {
+      return null;
+    }
+  } else {
+    return null;
+  }
+}

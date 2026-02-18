@@ -8,7 +8,6 @@
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   position: relative;
-  overflow: visible;
   animation: scale-in both;
   animation-duration: 4s;
   animation-delay: 0s;
@@ -20,6 +19,7 @@
   height: 100%;
   grid-column: 1 / -1;
   grid-row: 1 / -1;
+  overflow: visible;
 }
 
 .outer-frame {
