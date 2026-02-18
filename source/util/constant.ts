@@ -2,7 +2,7 @@
 
 
 export const MAIN_PLANETS = ["sun", "moon", "mercury", "venus", "mars", "jupiter", "saturn"] as const;
-export const ADDITIONAL_PLANETS = ["uranus", "neptune"] as const;
+export const ADDITIONAL_PLANETS = ["uranus", "neptune", "pluto"] as const;
 export const PLANETS = [...MAIN_PLANETS, ...ADDITIONAL_PLANETS] as const;
 
 export type MainPlanet = (typeof MAIN_PLANETS)[number];

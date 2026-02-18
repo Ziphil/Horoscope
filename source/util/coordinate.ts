@@ -21,7 +21,8 @@ export function calcCoordinates(date: Dayjs): Record<Planet, Coordinate> {
     ["jupiter", astronomy["Body"]["Jupiter"]],
     ["saturn", astronomy["Body"]["Saturn"]],
     ["uranus", astronomy["Body"]["Uranus"]],
-    ["neptune", astronomy["Body"]["Neptune"]]
+    ["neptune", astronomy["Body"]["Neptune"]],
+    ["pluto", astronomy["Body"]["Pluto"]]
   ] as const;
   const result = {} as Record<Planet, Coordinate>;
   for (const [planet, body] of astronomyBodies) {
