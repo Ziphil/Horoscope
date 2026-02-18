@@ -17,8 +17,8 @@ export const Letter = create(
 
     return (
       <span styleName="root" {...rest}>
-        {children.split("").map((char) => (
-          <LetterChar key={char} char={char}/>
+        {children.split("").map((char, index) => (
+          <LetterChar key={`${index}-${char}`} char={char}/>
         ))}
       </span>
     );
