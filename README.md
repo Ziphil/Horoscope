@@ -1,7 +1,7 @@
 <div align="center">
-<h1>Horoscope</h1>
+<h1>Fennese Horoscope</h1>
 </div>
 
 
 ## 概要
-概要です。
+フェンナ式の占星術とか考えたくないですか?
