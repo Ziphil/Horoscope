@@ -10,6 +10,12 @@
   &[data-numeral] {
     width: 0.56em;
   }
+  &[data-char="·"] {
+    margin-inline: 0.05em;
+  }
+  &[data-char=":"] {
+    margin-inline: 0.1em;
+  }
   &[data-rotate="true"] {
     rotate: 180deg;
     &[data-char="a"] {

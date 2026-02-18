@@ -27,7 +27,7 @@ export const Page = create(
     return (
       <main styleName="root">
         <div styleName="horoscope">
-          <Horoscope coordinates={coordinates}/>
+          <Horoscope coordinates={coordinates} date={now}/>
         </div>
         <div styleName="table">
           <PlanetTable coordinates={coordinates}/>

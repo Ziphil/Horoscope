@@ -4,12 +4,22 @@
 .root {
   width: 100%;
   height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   position: relative;
   overflow: visible;
   animation: scale-in both;
-  animation-duration: 3s;
+  animation-duration: 4s;
   animation-delay: 0s;
   animation-timing-function: ease;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
 }
 
 .outer-frame {
@@ -67,6 +77,13 @@
   animation-duration: 1s;
   animation-delay: 2.5s;
   animation-timing-function: ease;
+}
+
+.date {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  align-self: center;
+  justify-self: center;
 }
 
 
