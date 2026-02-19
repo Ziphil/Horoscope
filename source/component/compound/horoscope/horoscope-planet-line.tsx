@@ -22,7 +22,6 @@ export const HoroscopePlanetLine = create(
   }): ReactElement {
 
     const latitudeRatio = Math.max(Math.min(coordinate.latitude, MAX_LATITUDE * 0.9), -MAX_LATITUDE * 0.9) / MAX_LATITUDE;
-    const latitudeX = (CENTER_RADIUS + INNER_FRAME_RADIUS) / 2 + (CENTER_RADIUS - INNER_FRAME_RADIUS) / 2 * latitudeRatio;
 
     return (
       <g
@@ -49,9 +48,9 @@ export const HoroscopePlanetLine = create(
         />
         <circle
           styleName="point"
+          cx={(CENTER_RADIUS + INNER_FRAME_RADIUS) / 2 + (CENTER_RADIUS - INNER_FRAME_RADIUS) / 2 * latitudeRatio}
           cy={0}
           r={10}
-          style={{"--cx": latitudeX} as any}
         />
       </g>
     );

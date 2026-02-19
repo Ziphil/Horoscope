@@ -45,7 +45,6 @@
 }
 
 .point {
-  cx: var(--cx);
   fill: var(--color);
   stroke: none;
   transition: cx;
