@@ -2,7 +2,10 @@
 
 
 .root {
+  height: 1em;
+  line-height: 1;
   text-align: center;
+  position: relative;
   display: inline-block;
   &[data-numeral] {
     &[data-fixed="true"] {
@@ -14,13 +17,13 @@
     &[data-rotate="true"] {
       rotate: 180deg;
       &[data-char="a"] {
-        translate: 0em 0.353em;
+        translate: 0em 0.35em;
       }
       &[data-char="b"] {
-        translate: 0em 0.353em;
+        translate: 0em 0.35em;
       }
       &[data-char="c"] {
-        translate: 0em 0.353em;
+        translate: 0em 0.35em;
       }
     }
   }

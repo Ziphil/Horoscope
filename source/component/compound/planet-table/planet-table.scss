@@ -4,12 +4,24 @@
 
 
 .root {
-  display: grid;
-  grid-template-columns: repeat(2, max-content 1fr);
-  grid-auto-rows: max-content max-content;
-  list-style: none;
+  row-gap: calc(var(--unit) * 3);
+  display: flex;
+  flex-direction: column;
   animation: fade-in both;
   animation-duration: 1s;
   animation-delay: 3.5s;
   animation-timing-function: ease;
+}
+
+.section {
+  row-gap: calc(var(--unit) * 3);
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  column-gap: calc(var(--unit) * 4);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }

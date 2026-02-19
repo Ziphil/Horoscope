@@ -23,7 +23,7 @@ export const PlanetTableItem = create(
     const decimalAngle = Math.floor((angle - integerAngle) * (12 ** 3));
 
     return (
-      <li styleName="root" {...data({planet, longitude: coordinate.longitude.toString(), latitude: coordinate.latitude.toString()})}>
+      <div styleName="root" {...data({planet, longitude: coordinate.longitude.toString(), latitude: coordinate.latitude.toString()})}>
         <div styleName="symbol"></div>
         <div styleName="name">{PLANET_NAMES[planet]}</div>
         <div styleName="value">
@@ -35,7 +35,7 @@ export const PlanetTableItem = create(
             <Letter>{decimalAngle.toString(12).padStart(3, "0")}</Letter>
           </span>
         </div>
-      </li>
+      </div>
     );
 
   }
