@@ -23,7 +23,7 @@ export const Page = create(
     useEffect(() => {
       const interval = setInterval(() => {
         setNow(dayjs());
-      }, 60000);
+      }, 10000);
       return () => clearInterval(interval);
     }, []);
 
