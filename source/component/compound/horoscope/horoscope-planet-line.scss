@@ -27,6 +27,12 @@
   }
 }
 
+.root {
+  transition: transform;
+  transition-duration: 1s;
+  transition-timing-function: ease;
+}
+
 .line {
   stroke-width: 5;
   stroke: var(--color);
@@ -39,12 +45,16 @@
 }
 
 .point {
+  cx: var(--cx);
   fill: var(--color);
   stroke: none;
-  animation: fade-in both, pop both;
-  animation-duration: 1s, 1s;
-  animation-delay: 4s, 4s;
-  animation-timing-function: ease, ease-in-out;
+  transition: cx;
+  transition-duration: 1s;
+  transition-timing-function: ease;
+  animation: fade-in both;
+  animation-duration: 1s;
+  animation-delay: 4s;
+  animation-timing-function: ease;
 }
 
 .sector {

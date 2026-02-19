@@ -30,6 +30,7 @@
   height: var(--dimension);
   container-name: horoscope;
   container-type: size;
+  flex: 0 0 auto;
 }
 
 .table {
@@ -41,4 +42,5 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex: 0 0 auto;
 }
