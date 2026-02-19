@@ -21,7 +21,7 @@ export const HoroscopePlanetLine = create(
     coordinate: Coordinate
   }): ReactElement {
 
-    const pointX = (CENTER_RADIUS + INNER_FRAME_RADIUS) / 2 + Math.min(coordinate.latitude, MAX_LATITUDE) / MAX_LATITUDE * (CENTER_RADIUS - INNER_FRAME_RADIUS);
+    const pointX = (CENTER_RADIUS + INNER_FRAME_RADIUS) / 2 + Math.min(coordinate.latitude, MAX_LATITUDE * 0.9) / MAX_LATITUDE * (CENTER_RADIUS - INNER_FRAME_RADIUS);
 
     return (
       <g

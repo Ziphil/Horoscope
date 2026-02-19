@@ -9,9 +9,11 @@ import {data} from "/source/util/data";
 export const LetterChar = create(
   require("./letter-char.scss"), "LetterChar",
   function ({
-    char
+    char,
+    fixed
   }: {
-    char: string
+    char: string,
+    fixed: boolean
   }): ReactElement {
 
     const numeral = char.match(/^[0-9a-c]$/) !== null;
@@ -20,7 +22,7 @@ export const LetterChar = create(
     const [actualChar, rotate] = getActualChar(char);
 
     return (
-      <span styleName="root" {...data({char, numeral, alphabetic, rotate})}>
+      <span styleName="root" {...data({char, numeral, alphabetic, fixed, rotate})}>
         {actualChar}
       </span>
     );

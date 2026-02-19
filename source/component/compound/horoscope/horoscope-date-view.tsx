@@ -18,16 +18,16 @@ export const HoroscopeDateView = create(
     return (
       <div styleName="root">
         <div styleName="top">
-          <Letter>{date.hour().toString(12)}</Letter>
+          <Letter fixed={false}>{date.hour().toString(12)}</Letter>
           <Letter>{"·"}</Letter>
-          <Letter>{FENNESE_FRACTIONS[Math.floor(date.minute() / 5)]}</Letter>
+          <Letter fixed={false}>{FENNESE_FRACTIONS[Math.floor(date.minute() / 5)]}</Letter>
         </div>
         <div styleName="bottom">
-          <Letter>{date.date().toString(12)}</Letter>
+          <Letter fixed={false}>{date.date().toString(12)}</Letter>
           <Letter>{":"}</Letter>
-          <Letter>{FENNESE_NUMERALS[date.month()]}</Letter>
+          <Letter fixed={false}>{FENNESE_NUMERALS[date.month()]}</Letter>
           <Letter>{":"}</Letter>
-          <Letter>{date.year().toString(12)}</Letter>
+          <Letter fixed={false}>{date.year().toString(12)}</Letter>
         </div>
       </div>
     );

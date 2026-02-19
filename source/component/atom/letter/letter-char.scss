@@ -5,7 +5,9 @@
   text-align: center;
   display: inline-block;
   &[data-numeral] {
-    width: 0.55em;
+    &[data-fixed="true"] {
+      width: 0.55em;
+    }
     &:not([data-char="1"]) {
       font-variant-numeric: tabular-nums;
     }
