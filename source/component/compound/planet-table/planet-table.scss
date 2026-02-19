@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+@use "../../animation.scss" as *;
+
 
 .root {
   display: grid;
@@ -10,14 +12,4 @@
   animation-duration: 1s;
   animation-delay: 3.5s;
   animation-timing-function: ease;
-}
-
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
