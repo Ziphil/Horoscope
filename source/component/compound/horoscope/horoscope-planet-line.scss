@@ -47,6 +47,7 @@
 
 .sector {
   fill: oklch(from var(--color) l c h / 0.05);
+  filter: blur(20px);
   stroke: none;
   animation: fade-in both;
   animation-duration: 1s;
