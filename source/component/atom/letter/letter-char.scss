@@ -4,28 +4,28 @@
 .root {
   text-align: center;
   display: inline-block;
-  &:not([data-char="1"]) {
-    font-variant-numeric: tabular-nums;
-  }
   &[data-numeral] {
-    width: 0.56em;
+    width: 0.55em;
+    &:not([data-char="1"]) {
+      font-variant-numeric: tabular-nums;
+    }
+    &[data-rotate="true"] {
+      rotate: 180deg;
+      &[data-char="a"] {
+        translate: 0em 0.353em;
+      }
+      &[data-char="b"] {
+        translate: 0em 0.353em;
+      }
+      &[data-char="c"] {
+        translate: 0em 0.353em;
+      }
+    }
   }
   &[data-char="·"] {
     margin-inline: 0.05em;
   }
   &[data-char=":"] {
-    margin-inline: 0.1em;
-  }
-  &[data-rotate="true"] {
-    rotate: 180deg;
-    &[data-char="a"] {
-      translate: 0em 0.353em;
-    }
-    &[data-char="b"] {
-      translate: 0em 0.353em;
-    }
-    &[data-char="c"] {
-      translate: 0em 0.353em;
-    }
+    margin-inline: 0.15em;
   }
 }

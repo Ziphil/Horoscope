@@ -2,6 +2,7 @@
 
 import {ReactElement} from "react";
 import {create} from "/source/component/create";
+import {FENNESE_NUMERALS} from "/source/util/constant";
 import {data} from "/source/util/data";
 
 
@@ -14,10 +15,12 @@ export const LetterChar = create(
   }): ReactElement {
 
     const numeral = char.match(/^[0-9a-c]$/) !== null;
+    const alphabetic = FENNESE_NUMERALS.includes(char);
+
     const [actualChar, rotate] = getActualChar(char);
 
     return (
-      <span styleName="root" {...data({char, numeral, rotate})}>
+      <span styleName="root" {...data({char, numeral, alphabetic, rotate})}>
         {actualChar}
       </span>
     );

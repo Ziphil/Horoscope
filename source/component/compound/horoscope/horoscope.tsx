@@ -89,7 +89,7 @@ export const Horoscope = create(
                 textAnchor="middle"
                 dominantBaseline="central"
               >
-                {FENNESE_NUMERALS[index]}
+                {FENNESE_NUMERALS[index].toUpperCase()}
               </text>
             ))}
           </g>
