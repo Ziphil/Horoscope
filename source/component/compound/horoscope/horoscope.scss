@@ -46,6 +46,17 @@
   animation-timing-function: ease;
 }
 
+.middle {
+  stroke-width: 1;
+  stroke: var(--line-color);
+  fill: none;
+  stroke-dasharray: 10 10;
+  animation: fade-in both;
+  animation-duration: 1s;
+  animation-delay: 4s;
+  animation-timing-function: ease;
+}
+
 .center-frame {
   stroke-width: 2;
   stroke: var(--line-color);
@@ -71,7 +82,7 @@
 
 .number {
   font-size: 24px;
-  font-weight: 250;
+  font-weight: 300;
   fill: var(--line-color);
   animation: fade-in both;
   animation-duration: 1s;

@@ -45,7 +45,7 @@ export const Page = create(
 function parseHashDate(): Dayjs | null {
   const hash = window.location.hash.slice(1);
   if (hash) {
-    const parsedDate = dayjs(hash, "YYYY-MM-DD", true);
+    const parsedDate = dayjs(hash, "YYYY-MM-DDTHH:mm:ss");
     if (parsedDate.isValid()) {
       return parsedDate;
     } else {

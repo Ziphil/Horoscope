@@ -26,7 +26,7 @@
 }
 
 .line {
-  stroke-width: 4;
+  stroke-width: 5;
   stroke: var(--color);
   stroke-dasharray: calc(var(--length));
   stroke-dashoffset: calc(var(--length) * -1);
@@ -36,9 +36,17 @@
   animation-timing-function: ease;
 }
 
+.point {
+  fill: var(--color);
+  stroke: none;
+  animation: fade-in both;
+  animation-duration: 1s;
+  animation-delay: 4s;
+  animation-timing-function: ease;
+}
+
 .sector {
   fill: oklch(from var(--color) l c h / 0.05);
-  filter: blur(2cqi);
   stroke: none;
   animation: fade-in both;
   animation-duration: 1s;
