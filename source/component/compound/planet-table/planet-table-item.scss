@@ -37,7 +37,7 @@
 .symbol {
   width: calc(var(--unit) * 2.5);
   height: calc(var(--unit) * 2.5);
-  margin-block-start: calc(var(--unit) * 0.75);
+  margin-block-start: calc(var(--unit) * 1);
   grid-column: 2 / span 1;
   grid-row: 1 / -1;
   overflow: visible;
