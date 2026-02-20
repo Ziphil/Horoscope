@@ -33,6 +33,6 @@
   }
   &[data-size="small"] {
     margin-block-start: calc(var(--unit) * -0.1);
-    font-size: calc(var(--unit) * 2);
+    font-size: calc(var(--unit) * 1.75);
   }
 }

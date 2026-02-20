@@ -6,7 +6,7 @@ import {create} from "/source/component/create";
 import {Planet} from "/source/util/constant";
 import {EclipticCoordinate} from "/source/util/coordinate";
 import {data} from "/source/util/data";
-import {CENTER_RADIUS, INNER_FRAME_RADIUS} from "./horoscope";
+import {CENTER_RADIUS, INNER_FRAME_RADIUS} from "./horoscope-constant";
 
 
 const SECTOR_ANGLE = 4 * Math.PI / 180;
