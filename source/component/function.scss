@@ -11,6 +11,18 @@
   }
 }
 
+@mixin landscape-wide {
+  @media (orientation: landscape) and (min-aspect-ratio: 1.7) {
+    @content;
+  }
+}
+
+@mixin landscape-narrow {
+  @media (orientation: landscape) and (max-aspect-ratio: 1.7) {
+    @content;
+  }
+}
+
 @mixin portrait {
   @media (orientation: portrait) {
     @content;

@@ -4,24 +4,53 @@
 
 
 .root {
-  row-gap: unit(3);
   display: flex;
   flex-direction: column;
   animation: fade-in both;
   animation-duration: 1s;
   animation-delay: 3.5s;
   animation-timing-function: ease;
+  @include landscape-wide {
+    row-gap: unit(3);
+  }
+  @include landscape-narrow {
+    row-gap: unit(2);
+  }
+  @include portrait {
+    row-gap: unit(2);
+  }
 }
 
 .section {
-  row-gap: unit(3);
   display: flex;
   flex-direction: column;
+  @include landscape-wide {
+    row-gap: unit(3);
+  }
+  @include landscape-narrow {
+    row-gap: unit(2);
+  }
+  @include portrait {
+    row-gap: unit(2);
+  }
 }
 
 .row {
-  column-gap: unit(3);
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  @include landscape-wide {
+    column-gap: unit(3);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  @include landscape-narrow {
+    row-gap: unit(2);
+    display: flex;
+    flex-direction: column;
+  }
+  @include portrait {
+    column-gap: unit(3);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
 }
