@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-@use "../../animation.scss" as *;
+@use "../../function.scss" as *;
 
 
 .root {
@@ -15,13 +15,13 @@
 }
 
 .item {
-  padding-inline: calc(var(--unit) * 2);
+  padding-inline: unit(2);
   display: flex;
   flex-direction: column;
   align-items: center;
   &:not(:first-child) {
-    margin-block-start: calc(var(--unit) * 1);
-    padding-block-start: calc(var(--unit) * 0.25);
+    margin-block-start: unit(1);
+    padding-block-start: unit(0.25);
     border-top: solid 1px var(--line-color);
   }
 }
@@ -29,10 +29,10 @@
 .row {
   font-weight: 200;
   &[data-size="large"] {
-    font-size: calc(var(--unit) * 2.5);
+    font-size: unit(2.5);
   }
   &[data-size="small"] {
-    margin-block-start: calc(var(--unit) * -0.1);
-    font-size: calc(var(--unit) * 1.75);
+    margin-block-start: unit(-0.1);
+    font-size: unit(1.75);
   }
 }

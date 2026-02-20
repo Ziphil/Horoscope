@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+@use "../../function.scss" as *;
+
 
 :root {
   --light-background-color: oklch(0.36 0.01 286);
@@ -17,7 +19,7 @@
 .root {
   --unit: 90vh * 0.02;
   height: 90vh;
-  padding-inline: calc(var(--unit) * 4);
+  padding-inline: unit(4);
   display: flex;
   align-items: center;
   flex: 0 0 auto;
@@ -31,7 +33,7 @@
 
 .table {
   height: 100%;
-  margin-inline-start: calc(var(--unit) * 4);
+  margin-inline-start: unit(4);
   display: flex;
   flex-direction: column;
   align-items: center;

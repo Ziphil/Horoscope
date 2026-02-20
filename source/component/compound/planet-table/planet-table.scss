@@ -1,10 +1,10 @@
 @charset "utf-8";
 
-@use "../../animation.scss" as *;
+@use "../../function.scss" as *;
 
 
 .root {
-  row-gap: calc(var(--unit) * 3);
+  row-gap: unit(3);
   display: flex;
   flex-direction: column;
   animation: fade-in both;
@@ -14,13 +14,13 @@
 }
 
 .section {
-  row-gap: calc(var(--unit) * 3);
+  row-gap: unit(3);
   display: flex;
   flex-direction: column;
 }
 
 .row {
-  column-gap: calc(var(--unit) * 3);
+  column-gap: unit(3);
   display: flex;
   flex-direction: row;
   justify-content: center;
