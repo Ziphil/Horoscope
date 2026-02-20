@@ -48,6 +48,7 @@ export const HoroscopePlanetLine = create(
           style={{"--length": INNER_FRAME_RADIUS - CENTER_RADIUS} as any}
         />
         <g
+          styleName="symbol-group"
           transform={[
             `translate(${(CENTER_RADIUS + INNER_FRAME_RADIUS) / 2 + (CENTER_RADIUS - INNER_FRAME_RADIUS) / 2 * latitudeRatio} 0)`,
             `rotate(${coordinate.longitude} 0 0)`

@@ -47,6 +47,14 @@
   animation-timing-function: ease;
 }
 
+.symbol-group {
+  overflow: visible;
+  animation: fade-in both;
+  animation-duration: 1s;
+  animation-delay: 4s;
+  animation-timing-function: ease;
+}
+
 .symbol {
   stroke: var(--color);
   stroke-width: 3;
