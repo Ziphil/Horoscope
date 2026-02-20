@@ -9,7 +9,7 @@
   display: inline-block;
   &[data-numeral] {
     &[data-fixed="true"] {
-      width: 0.55em;
+      width: 0.52em;
     }
     &:not([data-char="1"]) {
       font-variant-numeric: tabular-nums;
