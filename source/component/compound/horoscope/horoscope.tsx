@@ -4,7 +4,7 @@ import {Dayjs} from "dayjs";
 import {ReactElement} from "react";
 import {create} from "/source/component/create";
 import {FENNESE_NUMERALS, MAIN_PLANETS, Planet} from "/source/util/constant";
-import {Coordinate} from "/source/util/coordinate";
+import {EclipticCoordinate, GeographicCoordinate} from "/source/util/coordinate";
 import {HoroscopeDateView} from "./horoscope-date-view";
 import {HoroscopePlanetLine} from "./horoscope-planet-line";
 
@@ -16,10 +16,12 @@ export const CENTER_RADIUS = 180;
 export const Horoscope = create(
   require("./horoscope.scss"), "Horoscope",
   function ({
-    coordinates,
+    planetCoordinates,
+    currentCoordinate,
     date
   }: {
-    coordinates: Record<Planet, Coordinate>,
+    planetCoordinates: Record<Planet, EclipticCoordinate>,
+    currentCoordinate: GeographicCoordinate | null,
     date: Dayjs
   }): ReactElement {
 
@@ -101,7 +103,7 @@ export const Horoscope = create(
             ))}
             <g clipPath="url(#inner-clip)">
               {MAIN_PLANETS.toReversed().map((planet) => (
-                <HoroscopePlanetLine key={planet} planet={planet} coordinate={coordinates[planet]}/>
+                <HoroscopePlanetLine key={planet} planet={planet} coordinate={planetCoordinates[planet]}/>
               ))}
             </g>
           </g>

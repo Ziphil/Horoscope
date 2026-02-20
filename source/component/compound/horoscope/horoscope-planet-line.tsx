@@ -4,7 +4,7 @@ import {ReactElement} from "react";
 import {PlanetSymbol} from "/source/component/atom/planet-symbol";
 import {create} from "/source/component/create";
 import {Planet} from "/source/util/constant";
-import {Coordinate} from "/source/util/coordinate";
+import {EclipticCoordinate} from "/source/util/coordinate";
 import {data} from "/source/util/data";
 import {CENTER_RADIUS, INNER_FRAME_RADIUS} from "./horoscope";
 
@@ -19,7 +19,7 @@ export const HoroscopePlanetLine = create(
     coordinate
   }: {
     planet: Planet,
-    coordinate: Coordinate
+    coordinate: EclipticCoordinate
   }): ReactElement {
 
     const latitudeRatio = Math.max(Math.min(coordinate.latitude, MAX_LATITUDE * 0.9), -MAX_LATITUDE * 0.9) / MAX_LATITUDE;

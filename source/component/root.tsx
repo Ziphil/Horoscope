@@ -15,9 +15,7 @@ export const Root = create(
   }): ReactElement {
 
     return (
-      <div>
-        <Page/>
-      </div>
+      <Page/>
     );
 
   }

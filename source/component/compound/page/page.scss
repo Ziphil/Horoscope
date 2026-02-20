@@ -15,29 +15,23 @@
 }
 
 .root {
-  width: 90vw;
+  --unit: 90vh * 0.02;
   height: 90vh;
+  padding-inline: calc(var(--unit) * 4);
   display: flex;
   align-items: center;
-  justify-content: center;
-  container-name: page;
-  container-type: size;
+  flex: 0 0 auto;
 }
 
 .horoscope {
-  --dimension: min(100cqw, 100cqb);
-  width: var(--dimension);
-  height: var(--dimension);
-  container-name: horoscope;
-  container-type: size;
+  height: 100%;
+  aspect-ratio: 1;
   flex: 0 0 auto;
 }
 
 .table {
-  --dimension: min(100cqw, 100cqb);
-  --unit: var(--dimension) * 0.02;
-  height: var(--dimension);
-  margin-inline-start: calc(var(--unit) * 6);
+  height: 100%;
+  margin-inline-start: calc(var(--unit) * 4);
   display: flex;
   flex-direction: column;
   align-items: center;

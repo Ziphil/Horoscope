@@ -4,12 +4,9 @@
 
 
 .root {
-  margin-block-start: -1cqi;
-  row-gap: 0.5cqi;
   color: var(--line-color);
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   animation: fade-in both;
   animation-duration: 1s;
@@ -17,12 +14,25 @@
   animation-timing-function: ease;
 }
 
-.top {
-  font-size: 6cqi;
-  font-weight: 200;
+.item {
+  padding-inline: calc(var(--unit) * 2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &:not(:first-child) {
+    margin-block-start: calc(var(--unit) * 1);
+    padding-block-start: calc(var(--unit) * 0.25);
+    border-top: solid 1px var(--line-color);
+  }
 }
 
-.bottom {
-  font-size: 4cqi;
+.row {
   font-weight: 200;
+  &[data-size="large"] {
+    font-size: calc(var(--unit) * 2.5);
+  }
+  &[data-size="small"] {
+    margin-block-start: calc(var(--unit) * -0.1);
+    font-size: calc(var(--unit) * 2);
+  }
 }

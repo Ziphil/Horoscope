@@ -5,7 +5,7 @@ import {Letter} from "/source/component/atom/letter";
 import {PlanetSymbol} from "/source/component/atom/planet-symbol";
 import {create} from "/source/component/create";
 import {MainPlanet, PLANET_NAMES} from "/source/util/constant";
-import {Coordinate} from "/source/util/coordinate";
+import {EclipticCoordinate} from "/source/util/coordinate";
 import {data} from "/source/util/data";
 
 
@@ -16,7 +16,7 @@ export const PlanetTableItem = create(
     coordinate
   }: {
     planet: MainPlanet,
-    coordinate: Coordinate
+    coordinate: EclipticCoordinate
   }): ReactElement {
 
     const angle = coordinate.longitude / 360 * 144;

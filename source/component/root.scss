@@ -6,6 +6,8 @@
 *:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
   all: unset;
   display: revert;
+  min-width: 0px;
+  min-height: 0px;
 }
 
 html {
@@ -13,6 +15,7 @@ html {
   height: 100%;
   font-family: "Ysabeau", sans-serif;
   background-image: radial-gradient(circle at center, var(--light-background-color), var(--dark-background-color));
+  overflow: hidden;
 }
 
 body {
@@ -22,5 +25,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  overflow: auto;
+}
+
+:global(#root) {
+  display: flex;
 }
