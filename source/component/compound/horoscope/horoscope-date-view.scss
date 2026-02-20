@@ -32,6 +32,7 @@
     font-size: unit(64);
   }
   &[data-size="small"] {
+    margin-block-start: unit(6);
     font-size: unit(36);
   }
 }

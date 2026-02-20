@@ -10,7 +10,7 @@ import {CENTER_RADIUS, INNER_FRAME_RADIUS} from "./horoscope-constant";
 
 
 const SECTOR_ANGLE = 4 * Math.PI / 180;
-const MAX_LATITUDE = 5;
+const MAX_LATITUDE = 8;
 
 export const HoroscopePlanetLine = create(
   require("./horoscope-planet-line.scss"), "HoroscopePlanetLine",
@@ -22,7 +22,7 @@ export const HoroscopePlanetLine = create(
     coordinate: EclipticCoordinate
   }): ReactElement {
 
-    const latitudeRatio = Math.max(Math.min(coordinate.latitude, MAX_LATITUDE * 0.9), -MAX_LATITUDE * 0.9) / MAX_LATITUDE;
+    const latitudeRatio = Math.max(Math.min(coordinate.latitude, MAX_LATITUDE * 0.8), -MAX_LATITUDE * 0.8) / MAX_LATITUDE;
 
     return (
       <g
@@ -50,8 +50,8 @@ export const HoroscopePlanetLine = create(
         <g
           styleName="symbol-group"
           transform={[
-            `translate(${(CENTER_RADIUS + INNER_FRAME_RADIUS) / 2 + (CENTER_RADIUS - INNER_FRAME_RADIUS) / 2 * latitudeRatio} 0)`,
-            `rotate(${coordinate.longitude} 0 0)`
+            `translate(${(INNER_FRAME_RADIUS + CENTER_RADIUS) / 2 + (INNER_FRAME_RADIUS - CENTER_RADIUS) / 2 * latitudeRatio} 0)`,
+            `rotate(${coordinate.longitude}, 0 0)`
           ].join(" ")}
         >
           <PlanetSymbol
