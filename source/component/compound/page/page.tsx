@@ -29,8 +29,6 @@ export const Page = create(
       getCurrentCoordinate().then(setCurrentCoordinate).catch(() => null);
     }, []);
 
-    console.log(currentCoordinate);
-
     return (
       <main styleName="root" key={hash}>
         <div styleName="horoscope">

@@ -64,6 +64,7 @@
   stroke: oklch(from var(--color) l c h / 0.25);
   stroke-width: 3;
   filter: blur(8px);
+  display: none;
 }
 
 .sector {
@@ -74,4 +75,5 @@
   animation-duration: 1s;
   animation-delay: 4s;
   animation-timing-function: ease;
+  display: none;
 }

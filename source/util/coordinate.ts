@@ -16,7 +16,8 @@ export type GeographicCoordinate = Opaque<{
 }, "GeographicCoordinate">;
 export type House = {
   ascendant: number,
-  descendant: number
+  descendant: number,
+  midheaven: number
 };
 
 export function calcPlanetCoordinates(date: Dayjs): Record<Planet, EclipticCoordinate> {
@@ -50,12 +51,14 @@ export function calcHouse(date: Dayjs, coordinate: GeographicCoordinate): House 
   const obliquityRad = astronomy["e_tilt"](time).tobl * astronomy["DEG2RAD"];
   const latitudeRad = coordinate.latitude * astronomy["DEG2RAD"];
   const ascendantRad = Math.atan2(
-    -Math.cos(ramcRad),
-    Math.sin(ramcRad) * Math.cos(obliquityRad) + Math.tan(latitudeRad) * Math.sin(obliquityRad)
+    Math.cos(ramcRad),
+    -(Math.sin(ramcRad) * Math.cos(obliquityRad) + Math.tan(latitudeRad) * Math.sin(obliquityRad))
   );
+  const midheavenRad = Math.atan2(Math.sin(ramcRad), Math.cos(ramcRad) * Math.cos(obliquityRad));
   const ascendant = ((ascendantRad * astronomy["RAD2DEG"]) % 360 + 360) % 360;
   const descendant = (ascendant + 180) % 360;
-  return {ascendant, descendant};
+  const midheaven = ((midheavenRad * astronomy["RAD2DEG"]) % 360 + 360) % 360;
+  return {ascendant, descendant, midheaven};
 }
 
 export async function getCurrentCoordinate(): Promise<GeographicCoordinate> {

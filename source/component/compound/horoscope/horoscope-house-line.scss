@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+@use "../../animation.scss" as *;
+
+
+.sector {
+  fill: oklch(from var(--line-color) l c h / 0.02);
+  stroke: none;
+  animation: fade-in both;
+  animation-duration: 1s;
+  animation-delay: 4s;
+  animation-timing-function: ease;
+}
