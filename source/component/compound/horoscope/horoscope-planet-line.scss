@@ -27,12 +27,6 @@
   }
 }
 
-.root {
-  transition: transform;
-  transition-duration: 1s;
-  transition-timing-function: ease;
-}
-
 .line {
   stroke-width: 5;
   stroke: var(--color);
@@ -47,9 +41,6 @@
 .point {
   fill: var(--color);
   stroke: none;
-  transition: cx;
-  transition-duration: 1s;
-  transition-timing-function: ease;
   animation: fade-in both;
   animation-duration: 1s;
   animation-delay: 4s;

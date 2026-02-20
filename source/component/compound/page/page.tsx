@@ -25,7 +25,7 @@ export const Page = create(
     const coordinates = useMemo(() => calcCoordinates(date), [date]);
 
     return (
-      <main styleName="root">
+      <main styleName="root" key={hash}>
         <div styleName="horoscope">
           <Horoscope coordinates={coordinates} date={date}/>
         </div>
