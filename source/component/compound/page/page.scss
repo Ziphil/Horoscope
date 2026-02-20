@@ -17,26 +17,52 @@
 }
 
 .root {
-  --unit: 90vh * 0.02;
-  height: 90vh;
-  padding-inline: unit(4);
-  display: flex;
-  align-items: center;
   flex: 0 0 auto;
+  @include landscape {
+    --unit: 90vh * 0.02;
+    height: 90vh;
+    padding-inline: unit(4);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  @include portrait {
+    --unit: 90vw * 0.02;
+    width: 90vw;
+    padding-block: unit(4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .horoscope {
-  height: 100%;
   aspect-ratio: 1;
   flex: 0 0 auto;
+  @include landscape {
+    height: 100%;
+  }
+  @include portrait {
+    width: 100%;
+  }
 }
 
 .table {
-  height: 100%;
-  margin-inline-start: unit(4);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   flex: 0 0 auto;
+  @include landscape {
+    height: 100%;
+    margin-inline-start: unit(4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  @include portrait {
+    width: 100%;
+    margin-block-start: unit(4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }

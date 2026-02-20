@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+@use "./function.scss" as *;
 @import url("https://fonts.googleapis.com/css2?family=Ysabeau:wght@1..1000&display=swap");
 
 
@@ -26,8 +27,20 @@ body {
   align-items: center;
   justify-content: center;
   overflow: auto;
+  @include landscape {
+    flex-direction: row;
+  }
+  @include portrait {
+    flex-direction: column;
+  }
 }
 
 :global(#root) {
   display: flex;
+  @include landscape {
+    flex-direction: row;
+  }
+  @include portrait {
+    flex-direction: column;
+  }
 }
