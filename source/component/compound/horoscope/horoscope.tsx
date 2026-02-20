@@ -37,12 +37,12 @@ export const Horoscope = create(
                 clipRule="evenodd"
                 d={[
                   `M 0 ${-INNER_FRAME_RADIUS}`,
-                  `A ${INNER_FRAME_RADIUS} ${INNER_FRAME_RADIUS}, 0 1 1, 0 ${INNER_FRAME_RADIUS}`,
-                  `A ${INNER_FRAME_RADIUS} ${INNER_FRAME_RADIUS}, 0 1 1, 0 ${-INNER_FRAME_RADIUS}`,
+                  `A ${INNER_FRAME_RADIUS} ${INNER_FRAME_RADIUS}, 0, 1 1, 0 ${INNER_FRAME_RADIUS}`,
+                  `A ${INNER_FRAME_RADIUS} ${INNER_FRAME_RADIUS}, 0, 1 1, 0 ${-INNER_FRAME_RADIUS}`,
                   "Z",
                   `M 0 ${-CENTER_RADIUS}`,
-                  `A ${CENTER_RADIUS} ${CENTER_RADIUS}, 0 1 1, 0 ${CENTER_RADIUS}`,
-                  `A ${CENTER_RADIUS} ${CENTER_RADIUS}, 0 1 1, 0 ${-CENTER_RADIUS}`,
+                  `A ${CENTER_RADIUS} ${CENTER_RADIUS}, 0, 1 1, 0 ${CENTER_RADIUS}`,
+                  `A ${CENTER_RADIUS} ${CENTER_RADIUS}, 0, 1 1, 0 ${-CENTER_RADIUS}`,
                   "Z"
                 ].join(" ")}
               />

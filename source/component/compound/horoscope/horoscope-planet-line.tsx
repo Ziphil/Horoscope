@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 
 import {ReactElement} from "react";
+import {PlanetSymbol} from "/source/component/atom/planet-symbol";
 import {create} from "/source/component/create";
 import {Planet} from "/source/util/constant";
 import {Coordinate} from "/source/util/coordinate";
@@ -34,7 +35,7 @@ export const HoroscopePlanetLine = create(
           d={[
             "M 0 0",
             `L ${INNER_FRAME_RADIUS * Math.cos(-SECTOR_ANGLE)} ${-INNER_FRAME_RADIUS * Math.sin(-SECTOR_ANGLE)}`,
-            `A ${INNER_FRAME_RADIUS} ${INNER_FRAME_RADIUS}, 0 0 1, ${INNER_FRAME_RADIUS * Math.cos(SECTOR_ANGLE)} ${-INNER_FRAME_RADIUS * Math.sin(SECTOR_ANGLE)}`,
+            `A ${INNER_FRAME_RADIUS} ${INNER_FRAME_RADIUS}, 0, 0 1, ${INNER_FRAME_RADIUS * Math.cos(SECTOR_ANGLE)} ${-INNER_FRAME_RADIUS * Math.sin(SECTOR_ANGLE)}`,
             "Z"
           ].join(" ")}
         />
@@ -46,12 +47,21 @@ export const HoroscopePlanetLine = create(
           y2={0}
           style={{"--length": INNER_FRAME_RADIUS - CENTER_RADIUS} as any}
         />
-        <circle
-          styleName="point"
-          cx={(CENTER_RADIUS + INNER_FRAME_RADIUS) / 2 + (CENTER_RADIUS - INNER_FRAME_RADIUS) / 2 * latitudeRatio}
-          cy={0}
-          r={10}
-        />
+        <g
+          transform={[
+            `translate(${(CENTER_RADIUS + INNER_FRAME_RADIUS) / 2 + (CENTER_RADIUS - INNER_FRAME_RADIUS) / 2 * latitudeRatio} 0)`,
+            `rotate(${coordinate.longitude} 0 0)`
+          ].join(" ")}
+        >
+          <PlanetSymbol
+            styleName="symbol-shadow"
+            planet={planet}
+          />
+          <PlanetSymbol
+            styleName="symbol"
+            planet={planet}
+          />
+        </g>
       </g>
     );
 

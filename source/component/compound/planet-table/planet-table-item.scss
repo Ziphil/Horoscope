@@ -27,18 +27,26 @@
 
 .root {
   row-gap: calc(var(--unit) * 0.1);
+  column-gap: calc(var(--unit) * 1);
   color: var(--color);
   display: grid;
-  grid-template-columns: calc(var(--unit) * 0) calc(var(--unit) * 9.5);
+  grid-template-columns: calc(var(--unit) * 9.5) max-content;
   grid-template-rows: max-content max-content;
 }
 
 .symbol {
-  grid-column: 1 / span 1;
+  width: calc(var(--unit) * 2.5);
+  height: calc(var(--unit) * 2.5);
+  margin-block-start: calc(var(--unit) * 0.75);
+  grid-column: 2 / span 1;
   grid-row: 1 / -1;
+  overflow: visible;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-self: center;
+  justify-self: center;
+  & path {
+    stroke-width: 3;
+  }
 }
 
 .name {
@@ -48,7 +56,7 @@
   font-weight: 300;
   text-transform: uppercase;
   text-align: end;
-  grid-column: 2 / span 1;
+  grid-column: 1 / span 1;
   grid-row: 1 / span 1;
 }
 
@@ -56,6 +64,6 @@
   font-size: calc(var(--unit) * 3);
   font-weight: 200;
   text-align: end;
-  grid-column: 2 / span 1;
+  grid-column: 1 / span 1;
   grid-row: 2 / span 1;
 }

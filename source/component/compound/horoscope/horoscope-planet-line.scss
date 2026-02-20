@@ -29,7 +29,7 @@
 
 .line {
   stroke-width: 5;
-  stroke: var(--color);
+  stroke: oklch(from var(--color) l c h / 0.25);
   stroke-dasharray: calc(var(--length));
   stroke-dashoffset: calc(var(--length) * -1);
   animation: draw both;
@@ -47,9 +47,20 @@
   animation-timing-function: ease;
 }
 
+.symbol {
+  stroke: var(--color);
+  stroke-width: 3;
+}
+
+.symbol-shadow {
+  stroke: oklch(from var(--color) l c h / 0.25);
+  stroke-width: 3;
+  filter: blur(8px);
+}
+
 .sector {
   fill: oklch(from var(--color) l c h / 0.05);
-  filter: blur(20px);
+  filter: blur(32px);
   stroke: none;
   animation: fade-in both;
   animation-duration: 1s;

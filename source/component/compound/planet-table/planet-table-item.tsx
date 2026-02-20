@@ -2,6 +2,7 @@
 
 import {ReactElement} from "react";
 import {Letter} from "/source/component/atom/letter";
+import {PlanetSymbol} from "/source/component/atom/planet-symbol";
 import {create} from "/source/component/create";
 import {MainPlanet, PLANET_NAMES} from "/source/util/constant";
 import {Coordinate} from "/source/util/coordinate";
@@ -24,7 +25,9 @@ export const PlanetTableItem = create(
 
     return (
       <div styleName="root" {...data({planet, longitude: coordinate.longitude.toString(), latitude: coordinate.latitude.toString()})}>
-        <div styleName="symbol"></div>
+        <svg styleName="symbol" width="64" height="64" viewBox="-32 -32 64 64">
+          <PlanetSymbol planet={planet}/>
+        </svg>
         <div styleName="name">{PLANET_NAMES[planet]}</div>
         <div styleName="value">
           <span styleName="integer-angle">
