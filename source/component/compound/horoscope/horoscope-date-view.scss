@@ -15,24 +15,24 @@
 }
 
 .item {
-  padding-inline: unit(2);
+  width: unit(240);
+  height: unit(120);
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   &:not(:first-child) {
-    margin-block-start: unit(1);
-    padding-block-start: unit(0.25);
-    border-top: solid 1px var(--line-color);
+    border-top: solid unit(2) var(--line-color);
   }
 }
 
 .row {
   font-weight: 200;
   &[data-size="large"] {
-    font-size: unit(2.5);
+    font-size: unit(64);
   }
   &[data-size="small"] {
     margin-block-start: unit(-0.1);
-    font-size: unit(1.75);
+    font-size: unit(36);
   }
 }

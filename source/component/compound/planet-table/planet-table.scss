@@ -11,13 +11,13 @@
   animation-delay: 3.5s;
   animation-timing-function: ease;
   @include landscape-wide {
-    row-gap: unit(3);
+    row-gap: unit(64);
   }
   @include landscape-narrow {
-    row-gap: unit(2);
+    row-gap: unit(48);
   }
   @include portrait {
-    row-gap: unit(2);
+    row-gap: unit(48);
   }
 }
 
@@ -25,30 +25,30 @@
   display: flex;
   flex-direction: column;
   @include landscape-wide {
-    row-gap: unit(3);
+    row-gap: unit(64);
   }
   @include landscape-narrow {
-    row-gap: unit(2);
+    row-gap: unit(48);
   }
   @include portrait {
-    row-gap: unit(2);
+    row-gap: unit(48);
   }
 }
 
 .row {
   @include landscape-wide {
-    column-gap: unit(3);
+    column-gap: unit(64);
     display: flex;
     flex-direction: row;
     justify-content: center;
   }
   @include landscape-narrow {
-    row-gap: unit(2);
+    row-gap: unit(48);
     display: flex;
     flex-direction: column;
   }
   @include portrait {
-    column-gap: unit(3);
+    column-gap: unit(96);
     display: flex;
     flex-direction: row;
     justify-content: center;

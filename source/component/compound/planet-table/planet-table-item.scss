@@ -28,17 +28,17 @@
 }
 
 .root {
-  row-gap: unit(0.1);
-  column-gap: unit(1);
+  row-gap: unit(4);
+  column-gap: unit(24);
   color: var(--color);
   display: grid;
-  grid-template-columns: unit(9.5) max-content;
+  grid-template-columns: unit(196) max-content;
   grid-template-rows: max-content max-content;
 }
 
 .symbol {
-  width: unit(2.5);
-  height: unit(2.5);
+  width: unit(64);
+  height: unit(64);
   margin-block-start: unit(1);
   grid-column: 2 / span 1;
   grid-row: 1 / -1;
@@ -52,7 +52,7 @@
 }
 
 .name {
-  font-size: unit(1);
+  font-size: unit(20);
   margin-inline-end: -0.15em;
   letter-spacing: 0.3em;
   font-weight: 300;
@@ -63,7 +63,7 @@
 }
 
 .value {
-  font-size: unit(3);
+  font-size: unit(64);
   font-weight: 200;
   text-align: end;
   grid-column: 1 / span 1;
