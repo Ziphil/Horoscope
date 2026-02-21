@@ -32,7 +32,7 @@
   column-gap: unit(24);
   color: var(--color);
   display: grid;
-  grid-template-columns: unit(196) max-content;
+  grid-template-columns: unit(216) max-content;
   grid-template-rows: max-content max-content;
 }
 
@@ -52,7 +52,7 @@
 }
 
 .name {
-  font-size: unit(20);
+  font-size: unit(22);
   margin-inline-end: -0.05em;
   letter-spacing: 0.3em;
   font-weight: 300;
@@ -63,7 +63,7 @@
 }
 
 .value {
-  font-size: unit(64);
+  font-size: unit(72);
   font-weight: 200;
   text-align: end;
   grid-column: 1 / span 1;

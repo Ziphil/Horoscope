@@ -16,7 +16,7 @@
 
 .item {
   width: unit(240);
-  height: unit(120);
+  height: unit(140);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,10 +29,10 @@
 .row {
   font-weight: 200;
   &[data-size="large"] {
-    font-size: unit(64);
+    font-size: unit(72);
   }
   &[data-size="small"] {
     margin-block-start: unit(6);
-    font-size: unit(36);
+    font-size: unit(40);
   }
 }
