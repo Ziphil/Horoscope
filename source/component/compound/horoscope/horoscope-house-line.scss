@@ -4,7 +4,7 @@
 
 
 .sector {
-  fill: oklch(from var(--line-color) l c h / 0.02);
+  fill: oklch(from var(--line-color) l c h / 0.03);
   stroke: none;
   animation: fade-in both;
   animation-duration: 1s;
