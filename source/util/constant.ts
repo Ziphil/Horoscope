@@ -12,11 +12,11 @@ export type Planet = MainPlanet | AdditionalPlanet;
 export const PLANET_NAMES = {
   sun: "локушро",
   moon: "лолукас",
-  mercury: "лоччугат",
-  venus: "локшужо",
-  mars: "лоччуӈҕо",
-  jupiter: "лошшуако",
-  saturn: "лоччудас"
+  mercury: "лоншуҕо",
+  venus: "лоччузло",
+  mars: "лобобшудад",
+  jupiter: "лозохшуко",
+  saturn: "лоршуссаф"
 } as const;
 
 export const FENNESE_NUMERALS = ["к", "г", "х", "ҕ", "т", "д", "с", "з", "п", "б", "ф", "в"];
