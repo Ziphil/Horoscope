@@ -57,14 +57,7 @@
 
 .symbol {
   stroke: var(--color);
-  stroke-width: 3;
-}
-
-.symbol-shadow {
-  stroke: oklch(from var(--color) l c h / 0.25);
-  stroke-width: 3;
-  filter: blur(8px);
-  display: none;
+  stroke-width: 3.5;
 }
 
 .sector {

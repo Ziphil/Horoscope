@@ -55,10 +55,6 @@ export const HoroscopePlanetLine = create(
           ].join(" ")}
         >
           <PlanetSymbol
-            styleName="symbol-shadow"
-            planet={planet}
-          />
-          <PlanetSymbol
             styleName="symbol"
             planet={planet}
           />

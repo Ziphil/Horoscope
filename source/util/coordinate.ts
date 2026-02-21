@@ -50,10 +50,7 @@ export function calcHouse(date: Dayjs, coordinate: GeographicCoordinate): House 
   const ramcRad = lst * 15 * astronomy["DEG2RAD"];
   const obliquityRad = astronomy["e_tilt"](time).tobl * astronomy["DEG2RAD"];
   const latitudeRad = coordinate.latitude * astronomy["DEG2RAD"];
-  const ascendantRad = Math.atan2(
-    Math.cos(ramcRad),
-    -(Math.sin(ramcRad) * Math.cos(obliquityRad) + Math.tan(latitudeRad) * Math.sin(obliquityRad))
-  );
+  const ascendantRad = Math.atan2(Math.cos(ramcRad), -(Math.sin(ramcRad) * Math.cos(obliquityRad) + Math.tan(latitudeRad) * Math.sin(obliquityRad)));
   const midheavenRad = Math.atan2(Math.sin(ramcRad), Math.cos(ramcRad) * Math.cos(obliquityRad));
   const ascendant = ((ascendantRad * astronomy["RAD2DEG"]) % 360 + 360) % 360;
   const descendant = (ascendant + 180) % 360;

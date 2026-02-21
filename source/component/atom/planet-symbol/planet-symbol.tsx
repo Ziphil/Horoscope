@@ -38,9 +38,9 @@ export const PlanetSymbol = create(
           "A 22 30, 0, 1 0, 28 -24"
         ].join(" ") : (planet === "venus") ? [
           "M -36 -20",
-          "A 28 26, 0, 1 1, -36 20",
+          "A 28 27, 0, 1 1, -36 20",
           "M 36 -20",
-          "A 28 26, 0, 1 0, 36 20"
+          "A 28 27, 0, 1 0, 36 20"
         ].join(" ") : (planet === "mars") ? [
           "M 0 -32",
           "L 0 32",
@@ -50,9 +50,9 @@ export const PlanetSymbol = create(
           "M -16 16",
           "L 16 16"
         ].join(" ") : (planet === "jupiter") ? [
-          "M 18 -28",
-          "A 24 18, 0, 1 0, 2 4",
-          "L 2 32",
+          "M -18 -28",
+          "A 24 18, 0, 1 1, -2 4",
+          "L -2 32",
           "M -30 7",
           "A 40 32, 0, 0 0, 30 7"
         ].join(" ") : (planet === "saturn") ? [
